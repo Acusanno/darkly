@@ -1,0 +1,6 @@
+On trouve la page admin en ajoutant /admin a l'url
+On veut bruteforce le mot de passe, mais le site nous fait attendre 5s entre chaque essai.
+Pour eviter l'attente, on peut envoyer la requete directement au back, avec postman par exemple.
+
+On telecharge la liste des 10000 mdp les plus utilises.
+

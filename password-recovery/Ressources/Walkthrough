@@ -1,0 +1,8 @@
+Quand on click sur mot de passe oublie sur la page de login, on peut check le mail utilise dans la requete sur le network de l inspecteur.
+
+On voit que la requete contient le parametre mail "webmaster@borntosec.com"
+Donc si on arrive a envoyer la requete avec une autre adresse mail, on pourra recuperer le mot de passe d'un utilisateur.
+
+Quand on inspect le bouton submit, on retrouve l'adresse email que l'on peut donc modifier.
+
+Lorsqu'on appuie sur submit apres avoir modifier l'adresse, ca affiche un nouveau flag.
