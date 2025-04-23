@@ -1,0 +1,10 @@
+On a trouve un dossier .hidden (http://localhost:8080/.hidden) avec pleins de README a l'interieur. Il pourrait donc y avoir un flag parmi un des README,
+cependant il y a beaucoup trop de fichiers pour regarder a la main.
+
+Donc on telecharge tous les fichiers en local: 
+    - wget -e robots=off -r -np http://localhost:8080/.hidden/ (-np permet de ne pas remonter dans les dossier parent et -e robots=off permet d'ignorer le robot.txt) (https://gist.github.com/simonw/27e810771137408fd7834ad153750c41)
+
+Et on peut grep sur chaque fichier pour trouver le mot flag dans un d'eux si il y en a un.
+    - grep -ri 'flag' (-i case insensitive)
+    - Lien vers le flag (whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README)
+    - Contenu (Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466)

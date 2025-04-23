@@ -1,0 +1,6 @@
+Sur cette page (http://localhost:8080/?page=upload#) on peut upload des images. On remarque que seul les jpeg sont accepter.
+On essaie donc d'upload un fichier autre qu'une image en modifiant la requete.
+
+Dans la requete le content-type est un form-data. Si on intercepte la requete, on peut changer le contenu du form-data, et donc changer le content-type du fichier en image/jpeg. Quand on renvoie la requete modifier on obtient le flag.
+
+Le serveur ne verifie donc pas le vrai type du fichier.
