@@ -1,6 +1,12 @@
-On trouve la page admin en ajoutant /admin a l'url
+On trouve la page de sign in
 On veut bruteforce le mot de passe, mais le site nous fait attendre 5s entre chaque essai.
-Pour eviter l'attente, on peut envoyer la requete directement au back, avec postman par exemple.
+Pour eviter l'attente, on peut utiliser un script de bruteforce qui envoi plusieurs requetes en simultane.
 
 On telecharge la liste des 10000 mdp les plus utilises.
 
+On utilise un script custom bruteforce.py qui tente les mdps et si il recoit une reponse positive, l'ecrit dans successful_logins.txt
+
+J'ai d'abord tenter avec le username 'admin', puis avec 'root'
+En quelque seconde, on trouve le mdp 'shadow' pour le login 'root'.
+
+Quand on le test sur le site on recoit le flag b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2
