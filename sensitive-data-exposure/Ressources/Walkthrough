@@ -1,5 +1,4 @@
-On a trouve un dossier .hidden (http://localhost:8080/.hidden) avec pleins de README a l'interieur. Il pourrait donc y avoir un flag parmi un des README,
-cependant il y a beaucoup trop de fichiers pour regarder a la main.
+Grace au robots.txt (http://localhost:8080/robots.txt) on voit qu'il existe un dossier /.hidden (http://localhost:8080/.hidden). Le dossier contient pleins de README a l'interieur. Il pourrait donc y avoir un flag parmi un d'eux, cependant il y a beaucoup trop de fichiers pour regarder a la main.
 
 Donc on telecharge tous les fichiers en local: 
     - wget -e robots=off -r -np http://localhost:8080/.hidden/ (-np permet de ne pas remonter dans les dossier parent et -e robots=off permet d'ignorer le robot.txt) (https://gist.github.com/simonw/27e810771137408fd7834ad153750c41)
