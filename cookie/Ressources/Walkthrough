@@ -12,3 +12,7 @@ Lorsqu'on presse sign in on recoit une popup avec:
 Good job! Flag : df2eb4ba34ed059a1e3e89ff4dfc13445f104a1a52295214def1c4fb1693a5c3
 
 
+Solution: 
+
+Ne pas stocker cette valeur dans un cookie car elle peut etre modifier facilement.
+Cela peut etre stocker dans le user a la place.

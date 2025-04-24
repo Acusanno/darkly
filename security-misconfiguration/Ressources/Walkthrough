@@ -27,3 +27,7 @@ Lorsqu'on met le hash dans crackstation.net on recoit le mdp : 	qwerty123@
 On peut alors visiter la page admin et tester ce mdp
 
 Ce qui nous donne le flag d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
+
+Solution: 
+
+Il ne faut pas stocker des identifiant dans des fichiers accessible publiquement. Il faut faire attention a rendre public uniquement les routes et les fichiers necessaire.

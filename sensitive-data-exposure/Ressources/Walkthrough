@@ -7,3 +7,8 @@ Et on peut grep sur chaque fichier pour trouver le mot flag dans un d'eux si il 
     - grep -ri 'flag' (-i case insensitive)
     - Lien vers le flag (whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/README)
     - Contenu (Hey, here is your flag : d5eec3ec36cf80dce44a896f961c1831a05526ec215693c8f2c39543497d4466)
+
+
+Solution: 
+
+Il faut pas stocker des donnees sensibles qui peuvent potentiellement etre accesible publiquement, meme en les mettant dans robots.txt pour pas qu'elle soit traquer ou accessibles.

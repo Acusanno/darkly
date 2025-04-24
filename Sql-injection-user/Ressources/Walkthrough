@@ -35,3 +35,5 @@ countersign:
 Si on entre le countersign dans crackstation.net on recoit le mdp : "FortyTwo"
 En suivant le commentaire:
 "FortyTwo" -> "fortytwo" -> "10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5"
+
+Il ne faut jamais utiliser les donnees recu dans back directement dans les requete sql par exemple. Il faut imperativement traiter et valider les donnees recues avant de les utiliser

@@ -17,3 +17,7 @@ Ce qui nous donnent:
 
 Ca fonctionne et on obtient le flag:
 0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e
+
+Solution: 
+
+Pour eviter les failles xss il faut valider les entree et donc empecher  l'execution d'un code malveillant dans le navigateur pour que la donnee saisie soit traiter comme du texte plutot que comme du code

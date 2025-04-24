@@ -15,6 +15,6 @@ Lorsqu'on recharge la page, on trouve le flag:
 f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 
 
-Explication:
+Solution: 
 Cette faille montre que le header d'une requete n'est pas forcement fiable, ici on change le user-agent et le referer, et cela suffit a tromper le site.
 Cependant, dans un vrai site, cette faille n'est que peut exploitable car le user-agent et le referer ne sont pas utilise pour identifier un user.

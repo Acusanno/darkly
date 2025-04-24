@@ -4,3 +4,7 @@ On essaie donc d'upload un fichier autre qu'une image en modifiant la requete.
 Dans la requete le content-type est un form-data. Si on intercepte la requete, on peut changer le contenu du form-data, et donc changer le content-type du fichier en image/jpeg. Quand on renvoie la requete modifier on obtient le flag.
 
 Le serveur ne verifie donc pas le vrai type du fichier.
+
+Solution: 
+
+Il faut avoir une validation du fichier upload cote back, par exemple en regardant le magic number du fichier pour connaitre son extension ou utliser ou juste utliser une lib qui fait la validation.

@@ -11,7 +11,7 @@ En quelque seconde, on trouve le mdp 'shadow' pour le login 'root'.
 
 Quand on le test sur le site on recoit le flag b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2
 
-Explication:
+Solution: 
 On voit qu'il est assez simple de bruteforce un mot de passe pas securise, un mot de passe fort prendrais des annees a etre trouver.
 Une technique deja presente ici est de patienter 5s avant de repondre si le mot de passe est faux,
 on pourrait aller plus loin et limitter le nombre de requetes par personne sur le site pour empecher de faire des requetes en simultanees.
