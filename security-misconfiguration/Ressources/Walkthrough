@@ -1,12 +1,12 @@
-On veut connaitre tout les chemins du sites. Pour ca on utilise un code python qui essaie plein de route
+On veut connaître tous les chemins du site. Pour ça, on utilise un code Python qui essaie plein de routes.
 
-Il est custom car normalement, il renverrais les routes dont la reponse est differente de 404
-Mais le site renvoie toujours 200 meme quand l'adresse n'existe pas.
-Par contre la requete renvoie une erreur quand la route existe.
+Il est personnalisé car normalement, il renverrait les routes dont la réponse est différente de 404.
+Mais le site renvoie toujours 200, même quand l'adresse n'existe pas.
+Par contre, la requête renvoie une erreur quand la route existe.
 
-Donc le code est modifie pour enregistrer les routes qui ont une erreur dans un fichier 'Directories'
+Donc, le code est modifié pour enregistrer les routes qui ont une erreur dans un fichier 'Directories'.
 
-On recoit donc :
+On reçoit donc :
 
 http://127.0.0.1:8080/admin
 http://127.0.0.1:8080/audio
@@ -17,17 +17,17 @@ http://127.0.0.1:8080/includes
 http://127.0.0.1:8080/js
 http://127.0.0.1:8080/whatever
 
-Seul 2 pages ne nous renvoie pas un 403 forbidden (whatever et admin)
-Si on regarde whatever, on trouve un fichier htpasswd qui contient un identifiant et un mdp hash
+Seules deux pages ne nous renvoient pas un 403 Forbidden (whatever et admin).
+Si on regarde whatever, on trouve un fichier htpasswd qui contient un identifiant et un mot de passe haché :
 
 root:437394baff5aa33daa618be47b75cb49
 
-Lorsqu'on met le hash dans crackstation.net on recoit le mdp : 	qwerty123@
+Lorsqu'on met le hash dans crackstation.net, on reçoit le mot de passe : qwerty123@
 
-On peut alors visiter la page admin et tester ce mdp
+On peut alors visiter la page admin et tester ce mot de passe.
 
-Ce qui nous donne le flag d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
+Ce qui nous donne le flag : d19b4823e0d5600ceed56d5e896ef328d7a2b9e7ac7e80f4fcdb9b10bcb3e7ff
 
-Solution: 
+Solution :
 
-Il ne faut pas stocker des identifiant dans des fichiers accessible publiquement. Il faut faire attention a rendre public uniquement les routes et les fichiers necessaire.
+Il ne faut pas stocker des identifiants dans des fichiers accessibles publiquement. Il faut faire attention à rendre publics uniquement les routes et les fichiers nécessaires.

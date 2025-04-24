@@ -1,14 +1,13 @@
-Quand on click sur mot de passe oublie sur la page de login, on peut check le mail utilise dans la requete sur le network de l inspecteur.
+Quand on clique sur 'mot de passe oublié' sur la page de login, on peut vérifier le mail utilisé dans la requête sur le network de l'inspecteur.
 
-On voit que la requete contient le parametre mail "webmaster@borntosec.com"
-Donc si on arrive a envoyer la requete avec une autre adresse mail, on pourra recuperer le mot de passe d'un utilisateur.
+On voit que la requête contient le paramètre mail 'webmaster@borntosec.com'.
+Donc, si on arrive à envoyer la requête avec une autre adresse mail, on pourra récupérer le mot de passe d'un utilisateur.
 
-Quand on inspect le bouton submit, on retrouve l'adresse email que l'on peut donc modifier.
+Quand on inspecte le bouton submit, on retrouve l'adresse email que l'on peut donc modifier.
 
-Lorsqu'on appuie sur submit apres avoir modifier l'adresse, ca affiche un nouveau flag.
+Lorsqu'on appuie sur submit après avoir modifié l'adresse, ça affiche un nouveau flag.
 
-
-Solution: 
-Le mail de recovery n'as pas le bon fonctionnement, il devrait renvoyer un mail a une adresse rentre si elle est lie a un compte.
-Si on voulait garder le fonctionnement actuel avec un unique bouton qui renvoit le mdp admin a son adresse, alors cette adresse devrait etre configurer dans le back,
-et ne pas etre un parametre dans le front.
+Solution :
+Le mail de récupération n'a pas le bon fonctionnement, il devrait renvoyer un mail à une adresse entrée si elle est liée à un compte.
+Si on voulait garder le fonctionnement actuel avec un unique bouton qui renvoie le mot de passe admin à son adresse, alors cette adresse devrait être configurée dans le back,
+et ne pas être un paramètre dans le front.

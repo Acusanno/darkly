@@ -1,17 +1,17 @@
-On trouve la page de sign in
-On veut bruteforce le mot de passe, mais le site nous fait attendre 5s entre chaque essai.
-Pour eviter l'attente, on peut utiliser un script de bruteforce qui envoi plusieurs requetes en simultane.
+On trouve la page de sign-in.
+On veut bruteforcer le mot de passe, mais le site nous fait attendre 5 secondes entre chaque essai.
+Pour éviter l'attente, on peut utiliser un script de bruteforce qui envoie plusieurs requêtes en simultané.
 
-On telecharge la liste des 10000 mdp les plus utilises.
+On télécharge la liste des 10 000 mots de passe les plus utilisés.
 
-On utilise un script custom bruteforce.py qui tente les mdps et si il recoit une reponse positive, l'ecrit dans successful_logins.txt
+On utilise un script personnalisé bruteforce.py qui tente les mots de passe et, s'il reçoit une réponse positive, l'écrit dans successful_logins.txt.
 
-J'ai d'abord tenter avec le username 'admin', puis avec 'root'
-En quelque seconde, on trouve le mdp 'shadow' pour le login 'root'.
+J'ai d'abord essayé avec le username 'admin', puis avec 'root'.
+En quelques secondes, on trouve le mot de passe 'shadow' pour le login 'root'.
 
-Quand on le test sur le site on recoit le flag b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2
+Quand on le teste sur le site, on reçoit le flag b3a6e43ddf8b4bbb4125e5e7d23040433827759d4de1c04ea63907479a80a6b2.
 
-Solution: 
-On voit qu'il est assez simple de bruteforce un mot de passe pas securise, un mot de passe fort prendrais des annees a etre trouver.
-Une technique deja presente ici est de patienter 5s avant de repondre si le mot de passe est faux,
-on pourrait aller plus loin et limitter le nombre de requetes par personne sur le site pour empecher de faire des requetes en simultanees.
+Solution :
+On voit qu'il est assez simple de bruteforcer un mot de passe peu sécurisé ; un mot de passe fort prendrait des années à être trouvé.
+Une technique déjà présente ici est de patienter 5 secondes avant de répondre si le mot de passe est faux.
+On pourrait aller plus loin et limiter le nombre de requêtes par personne sur le site pour empêcher de faire des requêtes simultanées.

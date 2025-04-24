@@ -1,0 +1,13 @@
+Sur la page http://localhost:8080/index.php?page=media&src=nsa.
+
+On voit qu'il y a un nom de fichier sur la page et que la source de l'image vient du paramètre src dans l'URL.
+On peut donc essayer d'injecter quelque chose via ce paramètre.
+
+Dans cette documentation (https://owasp.org/www-community/attacks/xss/), on voit qu'on peut encoder notre script en base64, on peut donc faire passer notre script pour une image en base64 :
+    - http://localhost:8080/index.php?page=media&src=url=data:text/html;base64,PHNjcmlwdD5hbGVydCgndGVzdDMnKTwvc2NyaXB0Pg
+
+Ce qui donne le flag : 928d819fc19405ae09921a2b71227bd9aba106f9d2d37ac412e9e5a750f1506d
+
+Solution :
+
+Pour éviter les failles XSS, il faut valider les entrées et donc empêcher l'exécution d'un code malveillant dans le navigateur pour que la donnée saisie soit traitée comme du texte plutôt que comme du code.

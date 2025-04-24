@@ -1,10 +1,10 @@
-Sur cette page (http://localhost:8080/?page=upload#) on peut upload des images. On remarque que seul les jpeg sont accepter.
-On essaie donc d'upload un fichier autre qu'une image en modifiant la requete.
+Sur cette page (http://localhost:8080/?page=upload#), on peut uploader des images. On remarque que seuls les JPEG sont acceptés.
+On essaie donc d'uploader un fichier autre qu'une image en modifiant la requête.
 
-Dans la requete le content-type est un form-data. Si on intercepte la requete, on peut changer le contenu du form-data, et donc changer le content-type du fichier en image/jpeg. Quand on renvoie la requete modifier on obtient le flag.
+Dans la requête, le content-type est un form-data. Si on intercepte la requête, on peut changer le contenu du form-data, et donc changer le content-type du fichier en image/jpeg. Quand on renvoie la requête modifiée, on obtient le flag.
 
-Le serveur ne verifie donc pas le vrai type du fichier.
+Le serveur ne vérifie donc pas le vrai type du fichier.
 
-Solution: 
+Solution :
 
-Il faut avoir une validation du fichier upload cote back, par exemple en regardant le magic number du fichier pour connaitre son extension ou utliser ou juste utliser une lib qui fait la validation.
+Il faut avoir une validation du fichier uploadé côté back, par exemple en regardant le magic number du fichier pour connaître son extension ou utiliser une librairie qui fait la validation.

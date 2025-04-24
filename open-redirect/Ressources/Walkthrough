@@ -1,13 +1,17 @@
-En bas de la page principale, on a des liens redirect vers des reseaux sociaus.
+En bas de la page principale, on a des liens de redirection vers des réseaux sociaux.
 
-Si on regarde l'addresse de redirection de plus pres:
+Si on regarde l'adresse de redirection de plus près :
 http://localhost:8080/index.php?page=redirect&site=twitter
 
-On peut changer le parametre 'site', et celui-ci n'etant pas proteger, on trouve ainsi une vulnerabilite,
-le back redirige vers le site donne sans verification.
+On peut changer le paramètre 'site', et celui-ci n'étant pas protégé, on trouve ainsi une vulnérabilité,
+le back redirige vers le site donné sans vérification.
 
-En tapant:
+En tapant :
 http://localhost:8080/index.php?page=redirect&site=something
 
-On obtient le flag:
+On obtient le flag :
 b9e775a0291fed784a2d9680fcfad7edd6b8cdf87648da647aaf4bba288bcab3
+
+Solution :
+
+Ne pas utiliser des redirections via des paramètres dans les requêtes.

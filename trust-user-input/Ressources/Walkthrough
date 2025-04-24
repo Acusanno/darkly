@@ -1,9 +1,9 @@
-Lorsqu'on va sur la page survey, on peut choisir un nombre entre 1 et 10, cela envoie le nombre de vote correspondant.
+Lorsqu'on va sur la page survey, on peut choisir un nombre entre 1 et 10, cela envoie le nombre de votes correspondant.
 
-On peut inspecter la page pour voir que chaque input a une variable 'value' qui determine combien de votes est envoyer au back.
+On peut inspecter la page pour voir que chaque input a une variable 'value' qui détermine combien de votes est envoyé au back.
 
-Il suffit de modifier un input avec une grande valeur (999999) et de voter pour faire apparaitre le flag.
+Il suffit de modifier un input avec une grande valeur (999999) et de voter pour faire apparaître le flag.
 
-Solution: 
+Solution :
 
-Il faut avoir une validation cote back, la validation cote front uniquement ne suffit pas.
+Il faut avoir une validation côté back, la validation côté front uniquement ne suffit pas.

@@ -1,17 +1,17 @@
-Lorsqu'on est sur une page autre que l'index, ex le survey et qu'on regarde l'url :
+Lorsqu'on est sur une page autre que l'index, par exemple le survey, et qu'on regarde l'URL :
 http://127.0.0.1:8080/index.php?page=survey
 
-On voit que la route prend un parametre 'page'
+On voit que la route prend un paramètre 'page'.
 
 On peut essayer de naviguer dans les fichiers : http://127.0.0.1:8080/index.php?page=../..
 
-Et si on continue un certain nombre de fois, le message de popup change.
+Et si on continue un certain nombre de fois, le message de la popup change.
 
-Lorsqu'on en met assez, on attaint le repertoire racine et le message de la popup devient 'You can do it'
+Lorsqu'on en met assez, on atteint le répertoire racine et le message de la popup devient 'You can do it'.
 
-ex : 127.0.0.1:8080/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../..
+Ex : http://127.0.0.1:8080/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../..
 
-Comme on est a la racine, on explore les dossiers que l'on retrouve souvent sur les sites web et on fini par tomber sur /etc/passwd qui nous donne un nouveau flag
+Comme on est à la racine, on explore les dossiers que l'on retrouve souvent sur les sites web et on finit par tomber sur /etc/passwd qui nous donne un nouveau flag.
 
-Solution: 
-Ici, le probleme est de laisser un acces public a des fichiers qui contiennent des donnees sensibles, comme un mot de passe.
+Solution :
+Ici, le problème est de laisser un accès public à des fichiers qui contiennent des données sensibles, comme un mot de passe.

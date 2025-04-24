@@ -1,20 +1,18 @@
-Lorsqu'on clique sur le copyright en bas des pages on arrive sur : http://127.0.0.1:8080/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
+Lorsqu'on clique sur le copyright en bas des pages, on arrive sur : http://127.0.0.1:8080/index.php?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f
 
-Quand on inspecte l'element on trouve : "Let's use this browser : "ft_bornToSec". It will help you a lot.""
-Et 'You must come from : "https://www.nsa.gov/".'
+Quand on inspecte l'élément, on trouve : "Let's use this browser : 'ft_bornToSec'. It will help you a lot."
+Et "You must come from : 'https://www.nsa.gov/'."
 
-
-On peut donc modifier le user-agent des requetes avec ft_bornToSec.
-Pour ce faire sur firefox, on va sur la page about:config et on y ajoute une cle:
+On peut donc modifier le user-agent des requêtes avec ft_bornToSec.
+Pour ce faire sur Firefox, on va sur la page about:config et on y ajoute une clé :
 general.useragent.override : ft_bornToSec
 
-Ensuite, pour faire croire qu'on vient de nsa gov, on utilise une extension firefox pour replace le referer du header HTTP.
-(Dans mon cas: https://addons.mozilla.org/en-US/firefox/addon/referer-modifier/)
+Ensuite, pour faire croire qu'on vient de nsa.gov, on utilise une extension Firefox pour remplacer le referer du header HTTP.
+(Dans mon cas : https://addons.mozilla.org/en-US/firefox/addon/referer-modifier/)
 
-Lorsqu'on recharge la page, on trouve le flag:
+Lorsqu'on recharge la page, on trouve le flag :
 f2a29020ef3132e01dd61df97fd33ec8d7fcd1388cc9601e7db691d17d4d6188
 
-
-Solution: 
-Cette faille montre que le header d'une requete n'est pas forcement fiable, ici on change le user-agent et le referer, et cela suffit a tromper le site.
-Cependant, dans un vrai site, cette faille n'est que peut exploitable car le user-agent et le referer ne sont pas utilise pour identifier un user.
+Solution :
+Cette faille montre que le header d'une requête n'est pas forcément fiable. Ici, on change le user-agent et le referer, et cela suffit à tromper le site.
+Cependant, dans un vrai site, cette faille n'est que peu exploitable car le user-agent et le referer ne sont pas utilisés pour identifier un utilisateur.
