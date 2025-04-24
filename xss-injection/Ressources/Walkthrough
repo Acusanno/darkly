@@ -1,0 +1,19 @@
+Sur la page de feedback (http://localhost:8080/index.php?page=feedback).
+
+On peut laisser un commentaire, qui est ensuite afficher en dessous dans une liste.
+
+On s'interesse a la partie 'message', l'objectif est d'executer un script xss.
+
+Pour l'exemple on utilise: <script>alert(123)</script>
+
+Pour sortir du log du commentaire, on commence par
+"//
+Cela ferme les guillemets et commente la suite du code, on utilise ensuite notre script XSS.
+
+Ce qui nous donnent:
+
+"//
+<script>alert(123)</script>
+
+Ca fonctionne et on obtient le flag:
+0fbb54bbf7d099713ca4be297e1bc7da0173d8b3c21c1811b916a3a86652724e
