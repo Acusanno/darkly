@@ -9,6 +9,9 @@ Et si on continue un certain nombre de fois, le message de popup change.
 
 Lorsqu'on en met assez, on attaint le repertoire racine et le message de la popup devient 'You can do it'
 
-ex : 27.0.0.1:8080/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../..
+ex : 127.0.0.1:8080/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../..
 
 Comme on est a la racine, on explore les dossiers que l'on retrouve souvent sur les sites web et on fini par tomber sur /etc/passwd qui nous donne un nouveau flag
+
+Explication:
+Ici, le probleme est de laisser un acces public a des fichiers qui contiennent des donnees sensibles, comme un mot de passe.
