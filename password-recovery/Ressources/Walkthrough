@@ -6,3 +6,9 @@ Donc si on arrive a envoyer la requete avec une autre adresse mail, on pourra re
 Quand on inspect le bouton submit, on retrouve l'adresse email que l'on peut donc modifier.
 
 Lorsqu'on appuie sur submit apres avoir modifier l'adresse, ca affiche un nouveau flag.
+
+
+Explication:
+Le mail de recovery n'as pas le bon fonctionnement, il devrait renvoyer un mail a une adresse rentre si elle est lie a un compte.
+Si on voulait garder le fonctionnement actuel avec un unique bouton qui renvoit le mdp admin a son adresse, alors cette adresse devrait etre configurer dans le back,
+et ne pas etre un parametre dans le front.
