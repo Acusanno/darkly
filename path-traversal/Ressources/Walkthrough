@@ -11,6 +11,7 @@ Lorsqu'on en met assez, on atteint le répertoire racine et le message de la pop
 
 Ex : http://127.0.0.1:8080/index.php?page=../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../../..
 
+il faut en mettre au moins 7 -> http://127.0.0.1:8080/index.php?page=../../../../../../../etc/passwd
 Comme on est à la racine, on explore les dossiers que l'on retrouve souvent sur les sites web et on finit par tomber sur /etc/passwd qui nous donne un nouveau flag.
 
 Solution :
